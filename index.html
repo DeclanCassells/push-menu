@@ -1,0 +1,125 @@
+  <!DOCTYPE html>
+  
+  <!-- Interactive Elements based on tutorilas at http://tympanus.net/Blueprints/SlidePushMenus/  http://blog.theonlytutorials.com/how-to-make-a-div-movable-draggable/
+  web deisgner magazine issue 203 -->
+
+</script>
+  <html lang="en" class="no-js">
+  <head>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="twitterfeed.js"></script>
+  <link href="twitter-styles.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#makeitmove").draggable( {containment: "#divcontainer", scroll: false} );
+  });
+  
+  </script>
+  
+  <style>
+  #divcontainer{
+  width: 900px;
+  height: 800px;
+      margin: 0 auto;
+      padding: 3px;
+  }
+  }
+  #makeitmove{
+  
+  border: 1px solid orange;
+  cursor: move;
+  
+  }
+  </style>
+  
+  
+
+  <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+          <title>UI Elements WIP</title>
+  
+          <link rel="stylesheet" type="text/css" href="css/default.css" />
+          <link rel="stylesheet" type="text/css" href="css/component.css" />
+          <script src="js/modernizr.custom.js"></script>
+  </head>
+      
+      
+      <body class="cbp-spmenu-push">
+      <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+        <h3>Menu</h3>
+          <a href="#"><img src="img/home.png" width="61" height="62">Home</a>
+          <a href="#"><img src="img/notification.png" width="63" height="59">Notifications</a>
+  <a href="#"><img src="img/trends.png" width="54" height="55">Trends</a>
+  <a href="#"><img src="img/settings.png" width="53" height="52">Settings
+          </a>
+      
+        </nav>
+          
+          
+  </header>
+              <div class="topbar">  <button id="showLeft"><img src="img/menu.png" width="40" height="40"></button></div>
+              
+              </div>
+       <div id="divcontainer">       
+      <div class="main">
+                <section>
+                  
+  
+                  <h2>
+  <!-- <button id="showLeft">Show/Hide Left Slide Menu</button> -->
+                  ScreenSquared</h2>
+  
+      <div class="clear"></div>
+      
+     <div id="makeitmove"> <div id="twitter-feed"></div>  </div>
+       <div id="twitter-feed-1"></div>  
+      </div>
+    
+  
+              
+          </div>
+          
+             <script type="text/javascript" >
+          $(document).ready(function () {
+              $('#twitter-feed-1').twitterFeed({
+                  screenname: 'Digitalinc',
+                  twitterprofile:'thisdigitalinc'
+                  
+              });
+              
+              $('#twitter-feed-2').twitterFeed({
+                  screenname: 'Digitalinc',
+                  twitterprofile:'thisdigitalinc'
+                  
+              });
+              
+              $('#twitter-feed-3').twitterFeed({
+                  screenname: 'Digitalinc',
+                  twitterprofile:'thisdigitalinc',
+                  type: 'search',
+                  q: 'dogs'
+                  
+              });
+          });
+      
+      </script>
+          
+          
+          
+  <!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+      <script src="js/classie.js"></script>
+      <script>
+              var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+                  body = document.body;
+  
+              showLeft.onclick = function() {
+                  classie.toggle( this, 'active' );
+                  classie.toggle( menuLeft, 'cbp-spmenu-open' );
+                  disableOther( 'showLeft' );
+              };
+              
+                   </script>
+      </body>
+  </html>
