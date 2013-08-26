@@ -1,0 +1,28 @@
+<script src='jquery.min.js'></script>
+
+<script>
+
+	jQuery(document).ready(function($) {
+		// Make an Ajax request
+		$.ajax({
+				
+			// Define the URL being called by Ajax
+			// This URL is for illustration only
+			// You MUST change it to call your server
+			url: 'http://dechasamediablog.com/140/timeline_response.php',
+			
+			// Put the results into the display element
+			success: function(data){
+				$('#timeline_results').html(data);
+			},
+			
+			// Display an error message if the request fails
+			error: function(data) {
+				$('#timeline_results').html('Ajax request failed');
+			}
+		})
+	});
+</script>
+	
+<strong>@Justin Bieber's Tweets:</strong><br/><br/>
+<span id='timeline_results'></span>

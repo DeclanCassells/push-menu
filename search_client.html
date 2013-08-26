@@ -1,0 +1,61 @@
+<head>
+	<title>Twitter Search</title>
+	<link href="search_client.css" type="text/css" rel="stylesheet" />
+	<link href="tweet.css" type="text/css" rel="stylesheet" />
+	<script src="jquery.min.js"></script>
+	<script src="search_client.js"></script>
+    <style>
+* { font-family:Arial; }
+h2 { padding:0 0 5px 5px; }
+h2 a { color: #224f99; }
+a { color:#999; text-decoration: none; }
+a:hover { color:#802727; }
+p { padding:0 0 5px 0; }
+
+input { padding:5px; border:1px solid #999; border-radius:4px; -moz-border-radius:4px; -web-kit-border-radius:4px; -khtml-border-radius:4px; }
+</style>
+
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+</head>
+<body>
+<script>
+$(function() {
+        var scntDiv = $('#p_scents');
+        var i = 0 + 1;
+        
+        $('#addScnt').live('click', function() {
+                $('<input name="search_terms'+i+'"/>  <button id="search_button'+i+'">Search</button> ').appendTo(scntDiv);
+                i++;
+                return false;
+        });
+        
+        $('#remScnt').live('click', function() { 
+                if( i > 2 ) {
+                        $(this).parents('p').remove();
+                        i--;
+                }
+                return false;
+        });
+});
+</script>
+	<div id="search_box">
+		<h1>Twitter Search</h1>
+		<input name="search_terms" autofocus/>
+		<button id="search_button">Search</button>
+	</div>
+    
+    <h2><a href="#" id="addScnt">Add Another Input Box</a></h2>
+
+<div id="p_scents">
+ 
+        <input name="search_terms1">
+		<button id="search_button1">Search</button> 
+</div>
+<div id="p_scents">
+ </div>
+        
+    
+	<div id="search_results"></div>
+    <div id="search_results1"></div>
+    <div id="search_results2"></div>
+</body>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+
+<script>
+	// Run once the page is loaded
+	jQuery(document).ready(function($) {
+
+		// Attach a click event to the span element
+		$('#test_span').click(function(){
+				
+			// Read the element's current value
+			var element_text = $('#test_span').html();
+			
+			// Display the current value of this span
+			alert(element_text);
+			
+			// Convert the value to upper case
+			element_text = element_text.toUpperCase();
+			
+			// Change the span to this new value
+			$('#test_span').html(element_text);
+		});
+	});
+</script>
+</head>
+<body>
+
+<span id='test_span'>Testing jQuery</span>
+
+</body>
+</html>
